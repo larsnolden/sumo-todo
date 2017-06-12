@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux'
 import configureStore from './configureStore';
 import AddButtonContainer from './addButton/addButtonContainer';
+import InputContainer from './input/inputContainer';
 
 //Global Styling
-import { StyleRoot } from 'radium';
+import { Style, StyleRoot } from 'radium';
 
 let styles = {
-  base: {
-    fontFamily: 'Roboto, SansSerif'
+  body: {
+    margin: 0,
+    fontFamily: 'Roboto, Helvetica, Arial, sans-serif'
   }
 }
 
@@ -18,7 +20,9 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <StyleRoot style={styles.base}>
+        <StyleRoot>
+          <Style rules={styles} />
+          <InputContainer />
           <AddButtonContainer />
         </StyleRoot>
       </Provider>

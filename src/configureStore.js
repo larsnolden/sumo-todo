@@ -1,5 +1,8 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
+
+//all reducers combined
 import rootReducer from './rootReducer';
 
 //Socket-IO middleware:
@@ -14,9 +17,10 @@ let middleware = [socketIoMiddleware, thunk];
 
 export default function configureStore(preloadedState) {
   return createStore(
-    rootReducer,
-    applyMiddleware(
-      ...middleware
+    rootReducer, composeWithDevTools(
+      applyMiddleware(
+        ...middleware
+      )
     )
   )
 }

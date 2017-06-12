@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { sendTodo, onInputChange } from './actions';
-import InputComponent from './InputComponent';
+import InputComponent from './inputComponent';
 
 let mapStateToProps = (state) => (
   {
-    inputValue: state.input.inputValue
+    inputValue: state.input.inputValue,
+    active: state.input.active
   }
 )
 

@@ -1,5 +1,5 @@
 let initialState = {
-  active: 'false',
+  active: false,
   inputValue: ''
 }
 

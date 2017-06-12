@@ -9,6 +9,6 @@ export let sendTodo = (todo) => {
 export let onInputChange = (target) => (
   {
     type: 'INPUT_CHANGE',
-    value: targe.value
+    value: target.value
   }
 )
