@@ -27,10 +27,10 @@ let styles = {
   }
 }
 
-let InputComponent = ({ active, inputValue }) => {
+let InputComponent = ({ active, inputValue, onInputChange }) => {
   if (active) return (
     <div style={styles.base}>
-      <input style={styles.input} value={inputValue} />
+      <input style={styles.input} onChange={onInputChange} value={inputValue} />
     </div>
 
   )

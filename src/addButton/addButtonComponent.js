@@ -21,7 +21,7 @@ let styles = {
 }
 
 let AddButtonComponent = ({ onClick }) => (
-  <div style={styles.base} onClick={onClick}>
+  <div style={styles.base} onClick={(onClick)}>
     <MdClear style={styles.icon} />
   </div>
 )
