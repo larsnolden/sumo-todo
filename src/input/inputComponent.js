@@ -27,12 +27,11 @@ let styles = {
   }
 }
 
-let InputComponent = ({ active, inputValue, onInputChange }) => {
+let InputComponent = ({ active, inputValue, onInputChange, onKeyPress }) => {
   if (active) return (
     <div style={styles.base}>
-      <input style={styles.input} onChange={onInputChange} value={inputValue} />
+      <input style={styles.input} onKeyPress={onKeyPress} onChange={onInputChange} value={inputValue} autoFocus={true} />
     </div>
-
   )
   else return null
 }

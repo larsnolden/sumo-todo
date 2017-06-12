@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { sendTodo, onInputChange } from './actions';
+import { onInputChange, onKeyPress } from './actions';
 import InputComponent from './inputComponent';
 
 let mapStateToProps = (state) => (
@@ -13,8 +13,8 @@ let mapStateToProps = (state) => (
 //bind Action Creators so we don't have to call dispatch
 let mapDispatchToProps = (dispatch) => (
   bindActionCreators({
-    sendTodo,
-    onInputChange
+    onInputChange,
+    onKeyPress
   }, dispatch)
 )
 
