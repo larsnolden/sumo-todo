@@ -17,10 +17,10 @@ let styles = {
   }
 }
 
-let ListComponent = ({ children }) => {
+let ListComponent = ({ children }) => (
   <div style={styles.base}>
     {children}
   </div>
-}
+)
 
 export default Radium(ListComponent);

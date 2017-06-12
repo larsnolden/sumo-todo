@@ -7,6 +7,7 @@ import MdCheck from 'react-icons/lib/md/check';
 let styles = {
   base: {
     flexBasis: '100%',
+    marginTop: '15px',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -14,7 +15,7 @@ let styles = {
     height: '30px',
     padding: '10px',
     border: '1px solid #7a7a7a',
-    borderBottom: '1px solid #7a7a7a',
+    boxShadow: '1px 1px 6px 0px rgba(0,0,0,0.35)'
   },
   checkBox: {
     flexBasis: '30px',
@@ -31,7 +32,6 @@ let styles = {
       background: '#f79b62'
     },
     '@media (max-width: 700px)': {
-      flexBasis: '20px',
       icon: {
         fontSize: '20px'
       }
@@ -46,7 +46,8 @@ let styles = {
     color: '#7a7a7a',
     height: 'inherit',
     '@media (max-width: 700px)': {
-      fontSize: '20px'
+      fontSize: '20px',
+      paddingLeft: '10px'
     }
   },
   remove: {

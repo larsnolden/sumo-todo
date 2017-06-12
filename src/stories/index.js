@@ -39,8 +39,23 @@ storiesOf('Task', module)
     <StyleRoot style={rootStyle.base}>
       <ListComponent>
         <TaskComponent title={'buy 3 hamsters'} done={false} onRemove={() => { }} />
-        <TaskComponent title={'clean hamster cage'} done={false} onRemove={() => { }} />
+        <TaskComponent title={'clean hamster cage'} done={true} onRemove={() => { }} />
+        <TaskComponent title={'clean hamster cage'} done={true} onRemove={() => { }} />
+        <TaskComponent title={'clean hamster cage'} done={true} onRemove={() => { }} />
+        <TaskComponent title={'clean hamster cage'} done={true} onRemove={() => { }} />
+        <TaskComponent title={'clean hamster cage'} done={true} onRemove={() => { }} />
       </ListComponent>
+    </StyleRoot>
+  )
+  )
+
+//Input
+import InputComponent from '../input/inputComponent';
+
+storiesOf('Input', module)
+  .add('gertrudes todo list', () => (
+    <StyleRoot style={rootStyle.base}>
+      <InputComponent active={true} />
     </StyleRoot>
   )
   )
