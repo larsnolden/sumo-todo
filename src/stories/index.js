@@ -5,6 +5,15 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
+import { StyleRoot } from 'radium';
+
+let rootStyle = {
+  base: {
+    fontFamily: 'Roboto',
+    fontWeight: 300
+  }
+}
+
 
 //Demo Button
 import Button from './Button';
@@ -18,5 +27,5 @@ storiesOf('Button', module)
 import TaskComponent from '../task/taskComponent';
 
 storiesOf('Task', module)
-  .add('undone', () => <TaskComponent title={'buy 3 hamsters'} done={false} onRemove={() => {}} />)
-  .add('done', () => <TaskComponent title={'buy 3 hamsters'} done={true} onRemove={() => {}} />)
+  .add('undone', () => <StyleRoot style={rootStyle.base}><TaskComponent title={'buy 3 hamsters'} done={false} onRemove={() => { }} /></StyleRoot>)
+  .add('done', () => <StyleRoot style={rootStyle.base}><TaskComponent title={'buy 3 hamsters'} done={true} onRemove={() => { }} /></StyleRoot>)
