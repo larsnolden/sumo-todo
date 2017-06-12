@@ -53,9 +53,20 @@ storiesOf('Task', module)
 import InputComponent from '../input/inputComponent';
 
 storiesOf('Input', module)
-  .add('gertrudes todo list', () => (
+  .add('base', () => (
     <StyleRoot style={rootStyle.base}>
       <InputComponent active={true} />
+    </StyleRoot>
+  )
+  )
+
+//Add Button
+import AddButtonComponent from '../input/addButtonComponent';
+
+storiesOf('AddButton', module)
+  .add('base', () => (
+    <StyleRoot style={rootStyle.base}>
+      <AddButtonComponent />
     </StyleRoot>
   )
   )

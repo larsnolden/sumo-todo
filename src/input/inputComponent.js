@@ -6,7 +6,7 @@ let styles = {
     position: 'absolute',
     width: '100%',
     height: '100%',
-    background: 'rgba(122, 122, 122, 0.1)',
+    background: 'rgba(122, 122, 122, 0.1)'
   },
   input: {
     position: 'absolute',
@@ -32,6 +32,7 @@ let InputComponent = ({ active, inputValue }) => {
     <div style={styles.base}>
       <input style={styles.input} value={inputValue} />
     </div>
+
   )
   else return null
 }
