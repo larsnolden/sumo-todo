@@ -17,9 +17,9 @@ let styles = {
   }
 }
 
-let ListComponent = ({todos}) => {
+let ListComponent = ({ children }) => {
   <div style={styles.base}>
-    {todos}
+    {children}
   </div>
 }
 

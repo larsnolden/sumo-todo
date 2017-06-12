@@ -29,3 +29,18 @@ import TaskComponent from '../task/taskComponent';
 storiesOf('Task', module)
   .add('undone', () => <StyleRoot style={rootStyle.base}><TaskComponent title={'buy 3 hamsters'} done={false} onRemove={() => { }} /></StyleRoot>)
   .add('done', () => <StyleRoot style={rootStyle.base}><TaskComponent title={'buy 3 hamsters'} done={true} onRemove={() => { }} /></StyleRoot>)
+
+
+//Task
+import ListComponent from '../list/listComponent';
+
+storiesOf('Task', module)
+  .add('gertrudes todo list', () => (
+    <StyleRoot style={rootStyle.base}>
+      <ListComponent>
+        <TaskComponent title={'buy 3 hamsters'} done={false} onRemove={() => { }} />
+        <TaskComponent title={'clean hamster cage'} done={false} onRemove={() => { }} />
+      </ListComponent>
+    </StyleRoot>
+  )
+  )
