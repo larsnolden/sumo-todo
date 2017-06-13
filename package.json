@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "localforage": "^1.5.0",
     "material-design-icons": "^3.0.1",
     "radium": "^0.19.1",
     "react": "^15.5.4",

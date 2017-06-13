@@ -24,6 +24,9 @@ let styles = {
     border: '1px solid #7a7a7a',
     ':focus': {
       outline: 'none'
+    },
+    '@media (max-width: 700px)': {
+      width: '100%',
     }
   }
 }

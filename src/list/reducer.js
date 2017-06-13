@@ -1,20 +1,36 @@
-//need to get initial State from ServiceWorker or localStorage -> 👀 configureStore.js
+import { setItemParsed } from '../localStorage';
+
 const initialState = {
   todos: []
 }
 
 export let list = (state = initialState, action) => {
   switch (action.type) {
+    //replace all Todos on first load
     case 'LOAD_ALL':
-      //replace all Todos on first load
-      console.log(action.todos)
-      return { todos: action.todos }
+      { //block scope + let to avoid multi declaration of todos
+        let todos = { todos: action.todos }
+        setItemParsed('todos', todos)
+        return todos
+      }
     case 'ADD_TODO':
-      return Object.assign({}, state, { todos: state.todos.concat([action.todo]) })
+      {
+        let todos = Object.assign({}, state, { todos: state.todos.concat([action.todo]) })
+        setItemParsed('todos', todos)
+        return todos
+      }
     case 'REMOVE_TODO':
-      return Object.assign({}, state, { todos: state.todos.filter(todo => todo.id !== action.id) })
+      {
+        let todos = Object.assign({}, state, { todos: state.todos.filter(todo => todo.id !== action.id) })
+        setItemParsed('todos', todos)
+        return todos
+      }
     case 'SET_DONE_TODO':
-      return Object.assign({}, state, { todos: state.todos.map(todo => todo.id === action.id ? Object.defineProperty(todo, 'done', { value: (!todo.done) }) : todo) })
+      {
+        let todos = Object.assign({}, state, { todos: state.todos.map(todo => todo.id === action.id ? Object.defineProperty(todo, 'done', { value: (!todo.done) }) : todo) })
+        setItemParsed('todos', todos)
+        return todos
+      }
     default:
       return state
   }
