@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux'
 import configureStore from './configureStore';
-import AddButtonContainer from './addButton/addButtonContainer';
+import AddButtonContainer from './buttons/addButtonContainer';
+import DeleteAllButtonContainer from './buttons/deleteAllButtonContainer';
+import ToggleAllButtonContainer from './buttons/toggleAllButtonContainer';
 import InputContainer from './input/inputContainer';
 import ListContainer from './list/listContainer';
+
+//to fetch local State
+import { getItemParsed } from './localStorage';
 
 //Global Styling
 import { Style, StyleRoot } from 'radium';
@@ -15,7 +20,9 @@ let styles = {
   }
 }
 
-const store = configureStore();
+let preloadedState = getItemParsed('todos')
+
+const store = configureStore(preloadedState);
 
 class App extends Component {
   render() {
@@ -26,6 +33,8 @@ class App extends Component {
           <ListContainer />
           <InputContainer />
           <AddButtonContainer />
+          <DeleteAllButtonContainer />
+          <ToggleAllButtonContainer />
         </StyleRoot>
       </Provider>
     );

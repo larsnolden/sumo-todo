@@ -10,16 +10,21 @@ let styles = {
     flexDirection: 'column',
     width: '700px',
     height: 'auto',
-    margin: '200px auto',
+    margin: '0 auto',
     '@media (max-width: 700px)': {
       width: '100%',
       height: '100%'
     },
+  },
+  title: {
+    color: '#7a7a7a',
+    fontSize: '40px'
   }
 }
 
 let ListComponent = ({ todos, onRemove, onDone }) => (
   <div style={styles.base}>
+    <h1 style={styles.title}>Todos</h1>
     {
       todos.map(
         todo =>

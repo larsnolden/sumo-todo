@@ -7,11 +7,11 @@ let styles = {
     width: '100%',
     height: '100%',
     top: 0,
-    background: 'rgba(122, 122, 122, 0.9)'
+    background: 'rgba(122, 122, 122, 0.9)',
+    zIndex: 2
   },
   input: {
     position: 'absolute',
-    zIndex: 1,
     width: '700px',
     top: '30%',
     left: '50%',
