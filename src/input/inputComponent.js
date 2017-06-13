@@ -1,6 +1,9 @@
 import React from 'react';
 import Radium from 'radium';
 
+import AddTodoButtonContainer from './addTodoButtonContainer';
+import CancelTodoButtonContainer from './cancelTodoButtonContainer';
+
 let styles = {
   base: {
     position: 'absolute',
@@ -10,12 +13,18 @@ let styles = {
     background: 'rgba(122, 122, 122, 0.9)',
     zIndex: 2
   },
-  input: {
-    position: 'absolute',
+  wrapper: {
+    display: 'block',
     width: '700px',
-    top: '30%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
+    margin: '10% auto 0 auto',
+    '@media (max-width: 700px)': {
+      width: '90%',
+      marginLeft: '5%'
+    }
+  },
+  input: {
+    width: '100%',
+    marginBottom: '20px',
     background: '#fff',
     borderRadius: '3px',
     color: '#7a7a7a',
@@ -24,17 +33,18 @@ let styles = {
     border: '1px solid #7a7a7a',
     ':focus': {
       outline: 'none'
-    },
-    '@media (max-width: 700px)': {
-      width: '100%',
     }
   }
 }
 
-let InputComponent = ({ active, inputValue, onInputChange, onKeyPress }) => {
+let InputComponent = ({ active, inputValue, onInputChange, onKeyDown }) => {
   if (active) return (
     <div style={styles.base}>
-      <input style={styles.input} onKeyPress={onKeyPress} onChange={onInputChange} value={inputValue} autoFocus={true} />
+      <div style={styles.wrapper}>
+        <input style={styles.input} onKeyDown={onKeyDown} onChange={onInputChange} value={inputValue} autoFocus={true} />
+        <AddTodoButtonContainer />
+        <CancelTodoButtonContainer />
+      </div>
     </div>
   )
   else return null

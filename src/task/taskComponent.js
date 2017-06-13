@@ -26,10 +26,10 @@ let styles = {
     cursor: 'pointer',
     icon: {
       fontSize: '30px',
-      color: '#7a7a7a'
+      color: '#fff'
     },
     active: {
-      background: '#f79b62'
+      background: '#1475d1'
     },
     '@media (max-width: 700px)': {
       icon: {

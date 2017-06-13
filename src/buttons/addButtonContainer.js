@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import ButtonComponent from './buttonComponent';
+import ButtonComponent from './components/buttonComponent';
 import { onNewTodoClick } from './actions';
 import React from 'react';
 
@@ -9,6 +9,7 @@ import MdClear from 'react-icons/lib/md/clear';
 
 let styles = {
   base: {
+    position: 'fixed',
     background: '#f79b62',
     right: '20px',
     bottom: '20px',
@@ -21,7 +22,7 @@ let styles = {
 }
 
 let styledButton = ({ onClick }) => (
-  <ButtonComponent style={styles.base} onClick={onClick}>
+  <ButtonComponent style={styles.base} type={'round'} onClick={onClick}>
     <MdClear style={styles.icon} />
   </ButtonComponent>
 )

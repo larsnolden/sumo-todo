@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import ButtonComponent from './buttonComponent';
+import ButtonComponent from './components/buttonComponent';
 import { onDeleteAllClick } from './actions';
 import React from 'react';
 
@@ -9,6 +9,7 @@ import MdDelete from 'react-icons/lib/md/delete';
 
 let styles = {
   base: {
+    position: 'fixed',
     background: '#d11b14',
     right: '20px',
     bottom: '80px'
@@ -20,7 +21,7 @@ let styles = {
 }
 
 let StyledButton = ({ onClick }) => (
-  <ButtonComponent style={styles.base} onClick={onClick}>
+  <ButtonComponent style={styles.base} type={'round'} onClick={onClick}>
     <MdDelete style={styles.icon} />
   </ButtonComponent>
 )

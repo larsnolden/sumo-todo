@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import ButtonComponent from './buttonComponent';
+import ButtonComponent from './components/buttonComponent';
 import { onToggleAllClick } from './actions';
 import React from 'react';
 
@@ -9,6 +9,7 @@ import MdCheck from 'react-icons/lib/md/check';
 
 let styles = {
   base: {
+    position: 'fixed',
     background: '#1475d1',
     right: '20px',
     bottom: '140px'
@@ -20,7 +21,7 @@ let styles = {
 }
 
 let StyledButton = ({ onClick }) => (
-  <ButtonComponent style={styles.base} onClick={onClick}>
+  <ButtonComponent style={styles.base} type={'round'} onClick={onClick}>
     <MdCheck style={styles.icon} />
   </ButtonComponent>
 )

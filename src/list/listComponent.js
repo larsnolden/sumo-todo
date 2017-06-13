@@ -12,8 +12,8 @@ let styles = {
     height: 'auto',
     margin: '0 auto',
     '@media (max-width: 700px)': {
-      width: '100%',
-      height: '100%'
+      width: '90%',
+      marginLeft: '5%'
     },
   },
   title: {

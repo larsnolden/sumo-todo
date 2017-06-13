@@ -6,32 +6,32 @@ export let sendTodo = (title) => (
   }
 )
 
-let toggleInput = () => (
+export let toggleInput = () => (
   {
     type: 'TOGGLE_INPUT'
   }
 )
 
-let clearInput = () => (
-  {
-    type: 'INPUT_CHANGE',
-    value: ''
-  }
-)
+export let submitTodo = () => (dispatch, getState) => {
+  dispatch(sendTodo(getState().input.inputValue))
+  dispatch(toggleInput())
+}
 
 //send todo + close input + clear input on enter keypress
-export let onKeyPress = (target) => {
+export let onKeyDown = (event) => {
   return (dispatch, getState) => {
-    console.log(getState().input.inputValue)
-    if (target.charCode === 13) {
-      dispatch(sendTodo(getState().input.inputValue))
-      dispatch(toggleInput())
-      dispatch(clearInput())
+    switch (event.keyCode) {
+      case 13:
+        dispatch(submitTodo())
+        break;
+      case 27:
+        dispatch(toggleInput())
+        break;
+      default:
+        break;
     }
   }
 }
-
-
 
 //handle inputChange
 export let onInputChange = (event) => (

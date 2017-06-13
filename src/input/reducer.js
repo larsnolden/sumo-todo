@@ -8,7 +8,7 @@ export let input = (state = initialState, action) => {
     case 'INPUT_CHANGE':
       return Object.assign({}, state, { inputValue: action.value })
     case 'TOGGLE_INPUT':
-      return Object.assign({}, state, { active: !state.active })
+      return Object.assign({}, state, { active: !state.active, inputValue: '' })
     default:
       return state
   }

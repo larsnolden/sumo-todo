@@ -9,7 +9,6 @@ export let list = (state = initialState, action) => {
     //replace all Todos on first load
     case 'LOAD_ALL':
       { //block scope + 'let' to avoid multi declaration of todos
-        console.log(action.todos)
         let state = { todos: action.todos }
         setItemParsed('todos', Object.assign({}, state, { todos: action.todos }))
         return Object.assign({}, state, { todos: action.todos })
