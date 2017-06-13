@@ -71,9 +71,9 @@ let checkBoxStyle = (done) => {
   else return null
 }
 
-let TaskComponent = ({ title, done, onRemove }) => (
+let TaskComponent = ({ title, done, onRemove, onDone }) => (
   <div style={styles.base}>
-    <div style={[styles.checkBox, checkBoxStyle(done)]}>{done ? <MdCheck style={styles.checkBox.icon} /> : null}</div>
+    <div onClick={onDone} style={[styles.checkBox, checkBoxStyle(done)]}>{done ? <MdCheck style={styles.checkBox.icon} /> : null}</div>
     <h1 style={styles.title}>{title}</h1>
     <div style={styles.remove}><MdClear onClick={onRemove} style={styles.remove.icon} /></div>
   </div>

@@ -6,13 +6,14 @@ let styles = {
     position: 'absolute',
     width: '100%',
     height: '100%',
-    background: 'rgba(122, 122, 122, 0.1)'
+    top: 0,
+    background: 'rgba(122, 122, 122, 0.9)'
   },
   input: {
     position: 'absolute',
     zIndex: 1,
     width: '700px',
-    top: '200px',
+    top: '30%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     background: '#fff',

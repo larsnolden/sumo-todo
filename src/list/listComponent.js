@@ -1,5 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
+import TaskComponent from '../task/taskComponent';
 
 let styles = {
   base: {
@@ -17,9 +18,20 @@ let styles = {
   }
 }
 
-let ListComponent = ({ children }) => (
+let ListComponent = ({ todos, onRemove, onDone }) => (
   <div style={styles.base}>
-    {children}
+    {
+      todos.map(
+        todo =>
+          <TaskComponent
+            key={todo.id}
+            title={todo.title}
+            done={todo.done}
+            onRemove={() => onRemove(todo.id)}
+            onDone={() => onDone(todo.id)}
+          />
+      )
+    }
   </div>
 )
 

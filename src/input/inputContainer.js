@@ -11,12 +11,10 @@ let mapStateToProps = (state) => (
 )
 
 //bind Action Creators so we don't have to call dispatch
-let mapDispatchToProps = (dispatch) => (
-  bindActionCreators({
-    onInputChange,
-    onKeyPress
-  }, dispatch)
-)
+let mapDispatchToProps = (dispatch) => bindActionCreators({
+  onInputChange,
+  onKeyPress
+}, dispatch)
 
 const InputContainer = connect(
   mapStateToProps,

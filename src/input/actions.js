@@ -1,8 +1,8 @@
 //send Todo to the server
-export let sendTodo = (todo) => (
+export let sendTodo = (title) => (
   {
     type: 'server/ADD_TODO',
-    todo
+    title
   }
 )
 
@@ -19,7 +19,7 @@ let clearInput = () => (
   }
 )
 
-//send todo on enter keypress
+//send todo + close input + clear input on enter keypress
 export let onKeyPress = (target) => {
   return (dispatch, getState) => {
     console.log(getState().input.inputValue)

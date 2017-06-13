@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import configureStore from './configureStore';
 import AddButtonContainer from './addButton/addButtonContainer';
 import InputContainer from './input/inputContainer';
+import ListContainer from './list/listContainer';
 
 //Global Styling
 import { Style, StyleRoot } from 'radium';
@@ -22,6 +23,7 @@ class App extends Component {
       <Provider store={store}>
         <StyleRoot>
           <Style rules={styles} />
+          <ListContainer />
           <InputContainer />
           <AddButtonContainer />
         </StyleRoot>
