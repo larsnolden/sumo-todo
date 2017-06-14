@@ -6,7 +6,7 @@ Sockets are used with [socket.io](https://github.com/socketio/socket.io).
 
 Online Version: [larsnolden.com](https://www.larsnolden.com)
 
-Ther Service Worker is configured to allow a 'native like' offline experience. (ATM view only, no midification)
+Ther Service Worker is configured to allow a 'native like' offline experience. (ATM view only, no modification)
  
 ![todo app](https://raw.githubusercontent.com/larsnolden/sumo-todo/master/todos_sample.png "Todos")
 
