@@ -1,5 +1,5 @@
-#Todo App with Sockets
-###build with react-create-app
+# Todo App with Sockets
+### build with react-create-app
 
 This is a simple Todo App, build with [React](https://github.com/facebook/react), [Redux](https://github.com/reactjs/redux) and [react-create-app](https://github.com/facebookincubator/create-react-app/).
 Sockets are used with [socket.io](https://github.com/socketio/socket.io).
