@@ -10,7 +10,7 @@ import io from 'socket.io-client';
 
 import rootReducer from './rootReducer';
 
-export let socket = io('https://larsnolden.com:3003');
+export let socket = io('https://larsnolden.com:3003', { secure: true });
 let socketIoMiddleware = createSocketIoMiddleware(socket, "server/");
 
 let middleware = [socketIoMiddleware, thunk];
